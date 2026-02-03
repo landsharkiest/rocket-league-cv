@@ -1,0 +1,34 @@
+# Rocket League CV Configuration
+
+# Model settings
+model:
+  type: "yolov8"  # YOLOv8 for object detection
+  size: "n"  # n (nano), s (small), m (medium), l (large), x (xlarge)
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+
+# Tracking settings
+tracking:
+  tracker_type: "bytetrack"  # ByteTrack algorithm for multi-object tracking
+  track_buffer: 30  # Number of frames to keep track history
+  match_threshold: 0.8
+
+# Classes to detect
+classes:
+  - "car"
+  - "ball"
+  - "boost_pad"
+
+# Speed calculation
+speed:
+  fps: 30  # Default FPS, will be overridden by video FPS
+  pixels_per_meter: 10  # Calibration: pixels per meter (needs calibration for actual footage)
+  smoothing_window: 5  # Number of frames for speed smoothing
+
+# Output settings
+output:
+  save_video: true
+  draw_trails: true
+  trail_length: 30
+  show_speed: true
+  show_confidence: false

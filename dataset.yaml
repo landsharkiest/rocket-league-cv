@@ -1,0 +1,29 @@
+# Dataset configuration for training YOLOv8 on Rocket League footage
+# This file should be placed in your dataset directory and referenced during training
+
+# Path to dataset directory (relative to this file)
+path: ./dataset
+
+# Paths to train/val/test splits
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 3
+
+# Class names
+names:
+  0: car
+  1: ball
+  2: boost_pad
+
+# Optional: Dataset metadata
+# Download script or instructions can be added here
+# For example:
+# download: |
+#   # Instructions to download or prepare the dataset
+#   # 1. Record Rocket League gameplay
+#   # 2. Extract frames using: ffmpeg -i video.mp4 -vf fps=1 frames/frame_%04d.jpg
+#   # 3. Annotate using LabelImg or CVAT
+#   # 4. Split into train/val/test sets (e.g., 70/20/10)
